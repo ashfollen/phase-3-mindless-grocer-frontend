@@ -22,5 +22,5 @@ Wireframe/Mockup:
 - --------RecipeSelectionsContainer
 - ----------RecipeSelectionList
 - ----Route="/grocerylist"
-- ------IngredientsContainer
-- --------IngredientsListPerMarket
+- ------GroceriesContainer
+- --------GroceriesListPerMarket

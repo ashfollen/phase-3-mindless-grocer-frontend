@@ -8,7 +8,7 @@ import {
 import logo from './logo.svg';
 import './App.css';
 import RecipesContainer from "./components/RecipesContainer"
-import IngredientsContainer from "./components/IngredientsContainer"
+import GroceriesContainer from "./components/GroceriesContainer"
 import Home from "./components/Home"
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             <RecipesContainer />
         </Route>
         <Route path="/groceries">
-            <IngredientsContainer />
+            <GroceriesContainer />
         </Route>
       </Switch>
     </div>
