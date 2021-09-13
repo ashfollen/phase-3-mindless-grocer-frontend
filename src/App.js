@@ -1,11 +1,38 @@
+import React, {useEffect, useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import RecipesContainer from "./components/RecipesContainer"
+import IngredientsContainer from "./components/IngredientsContainer"
+import Home from "./components/Home"
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      Testing Connor & Ashley's app! 
+      <nav className="nav">
+        <h2><Link to="/">Home</Link></h2>
+        <h2><Link to="/recipes">Recipes</Link></h2>
+        <h2><Link to="/groceries">Grocery List</Link></h2>    
+      </nav>
+      <Switch>
+        <Route exact path="/">
+            <Home />
+        </Route>
+        <Route path="/recipes">
+            <RecipesContainer />
+        </Route>
+        <Route path="/groceries">
+            <IngredientsContainer />
+        </Route>
+      </Switch>
     </div>
+    </Router>
   );
 }
 
