@@ -48,15 +48,10 @@ function App() {
             <Home />
         </Route>
         <Route path="/recipes">
-            <RecipesContainer />
+            <RecipesContainer recipes={recipes}/>
         </Route>
         <Route path="/groceries">
-            {/* <GroceriesContainer markets={markets} ingredients={ingredients}/> */}
-            <ul>
-              {markets.map((market) => (
-                <GroceriesContainer key={market.id} market={market}/>
-              ))}
-            </ul>
+            <GroceriesContainer markets={markets} ingredients={ingredients}/>
         </Route>
       </Switch>
     </div>

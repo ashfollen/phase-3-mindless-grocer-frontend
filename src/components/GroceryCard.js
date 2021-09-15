@@ -1,19 +1,14 @@
 import React, {useEffect, useState} from 'react';
 
-function GroceriesCard({ market, ingredient }) {
+function GroceriesCard({ market, ingredients }) {
   return (
-    <div className="ui column">
-      <div
-        className="ui card"
-        key={market.id}
-      >
-        <div className="content">
-          <div className="header">
-            {market.name}
-          </div>
+    <div className="market-card">
+        <div className="market-list">
+         <h2>{market.name}</h2>
+            {ingredients.map(ingredient =>
+                `${ingredient.name}, `)}
         </div>
-        </div>
-      </div>
+    </div>
   );
 }
 
