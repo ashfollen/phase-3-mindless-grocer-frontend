@@ -12,6 +12,29 @@ import GroceriesContainer from "./components/GroceriesContainer"
 import Home from "./components/Home"
 
 function App() {
+  const [markets, setMarkets] = useState([]);
+  const [recipes, setRecipes] = useState([]);
+  const [ingredients, setIngredients] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/markets")
+      .then((resp) => resp.json())
+      .then((markets) => setMarkets(markets));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/recipes")
+      .then((resp) => resp.json())
+      .then((recipes) => setRecipes(recipes));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/ingredients")
+      .then((resp) => resp.json())
+      .then((ingredients) => setIngredients(ingredients));
+  }, []);
+
+
   return (
     <Router>
     <div className="App">
