@@ -57,7 +57,7 @@ function App() {
             <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList}/>
         </Route>
         <Route path="/groceries">
-            <GroceriesContainer />
+            <GroceriesContainer markets={markets} ingredients={ingredients} setIngredients={setIngredients}/>
         </Route>
       </Switch>
     </div>

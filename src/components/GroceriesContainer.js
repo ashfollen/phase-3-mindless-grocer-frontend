@@ -1,9 +1,21 @@
 import React, {useEffect, useState} from 'react';
+import GroceriesCard from './GroceryCard';
 
-function GroceriesContainer() {
+function GroceriesContainer({ markets, ingredients, setIngredients }) {
     return (
-        <h1>Testing Groceries Container</h1>
-    )
+        <div className="market-container">
+            {markets.map(market => {
+                return (
+                    <GroceriesCard 
+                        key={market.id}
+                        market={market}
+                        ingredients={ingredients}
+                        setIngredients={setIngredients}
+                    />
+                );
+            })}
+        </div>   
+    );
 }
 
 export default GroceriesContainer;
