@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import GroceriesCard from './GroceryCard';
 
-function GroceriesContainer({ markets, ingredients }) {
+function GroceriesContainer({ market, ingredients }) {
     return (
-        <h1>Testing Groceries Container
-            <div id="grocery-card">
-                {markets.map(market => console.log(market))}
-                {markets.map(market => (
+        // console.log(market)
+            <div id="market-list">
+                <li>
+                Market: {market.name}
+                {/* {market.map(market => (
                     <GroceriesCard 
                         key={market.id}
                         market={market}
-                     />))}
-            </div>
-        </h1>     
+                     />))} */}
+                </li>
+            </div>   
     );
 }
 
