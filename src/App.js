@@ -51,7 +51,7 @@ function App() {
             <RecipesContainer recipes={recipes}/>
         </Route>
         <Route path="/groceries">
-            <GroceriesContainer markets={markets} ingredients={ingredients}/>
+            <GroceriesContainer markets={markets} ingredients={ingredients} setIngredients={setIngredients}/>
         </Route>
       </Switch>
     </div>
