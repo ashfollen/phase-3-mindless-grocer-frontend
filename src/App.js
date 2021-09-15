@@ -15,6 +15,16 @@ function App() {
   const [markets, setMarkets] = useState([]);
   const [recipes, setRecipes] = useState([]);
   const [ingredients, setIngredients] = useState([]);
+  
+  useEffect(() => {
+    fetch("http://localhost:9292/recipes")
+      .then((resp) => resp.json())
+      .then((recipes) => setRecipes(recipes));
+  }, []);
+  
+  function updateRecipeList(updatedCheckedRecipe) {
+    setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
+  }
 
   useEffect(() => {
     fetch("http://localhost:9292/markets")
@@ -22,17 +32,13 @@ function App() {
       .then((markets) => setMarkets(markets));
   }, []);
 
-  useEffect(() => {
-    fetch("http://localhost:9292/recipes")
-      .then((resp) => resp.json())
-      .then((recipes) => setRecipes(recipes));
-  }, []);
 
   useEffect(() => {
     fetch("http://localhost:9292/ingredients")
       .then((resp) => resp.json())
       .then((ingredients) => setIngredients(ingredients));
   }, []);
+
 
 
   return (
@@ -48,7 +54,7 @@ function App() {
             <Home />
         </Route>
         <Route path="/recipes">
-            <RecipesContainer recipes={recipes}/>
+            <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList}/>
         </Route>
         <Route path="/groceries">
             <GroceriesContainer markets={markets} ingredients={ingredients} setIngredients={setIngredients}/>
