@@ -29,7 +29,8 @@ function RecipeOptions({recipe, updateRecipeList, onDeleteRecipe}) {
     }
 
     return (
-        <div className="recipe-option-items">                
+        <div className="recipe-option-items">
+            
                 <input
                     type="checkbox"
                     id={recipe.id}
@@ -37,8 +38,10 @@ function RecipeOptions({recipe, updateRecipeList, onDeleteRecipe}) {
                     checked={recipeChecked}
                     onChange={(e) => handleOnChange(e)}
                 />
+                &nbsp;&nbsp;
                 <h2>{recipe.name}</h2>
-                <button id={recipe.id} onClick={(e) => handleDelete(e.target.id)}>&nbsp;&nbsp; 🗑 &nbsp;&nbsp;</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id={recipe.id} onClick={(e) => handleDelete(e.target.id)}>&nbsp;&nbsp; 🗑 &nbsp;&nbsp;</button> 
         </div>
     )
 }
