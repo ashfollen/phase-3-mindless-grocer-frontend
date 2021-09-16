@@ -23,7 +23,12 @@ function App() {
   }, []);
   
   function updateRecipeList(updatedCheckedRecipe) {
+    console.log("BEFORE SET INGREDIENTS", ingredients)
     setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
+    console.log("IS THIS HAPPENING????")
+    setIngredients(ingredients.map((ogIngredient) => ogIngredient.recipe_id === updatedCheckedRecipe.id ? {...ogIngredient, recipe_chosen: true} : ogIngredient))
+    console.log("AFTER SETINGREDIENTS", ingredients)
+  
   }
 
   useEffect(() => {
@@ -38,6 +43,11 @@ function App() {
       .then((resp) => resp.json())
       .then((ingredients) => setIngredients(ingredients));
   }, []);
+
+  function onDeleteRecipe(id) {
+    const revisedRecipeList = recipes.filter(recipe => recipe.id != id)
+    setRecipes(revisedRecipeList)
+  }
 
 
 
@@ -54,7 +64,7 @@ function App() {
             <Home />
         </Route>
         <Route path="/recipes">
-            <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList}/>
+            <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList} onDeleteRecipe={onDeleteRecipe} />
         </Route>
         <Route path="/groceries">
             <GroceriesContainer markets={markets} ingredients={ingredients.filter(ingredient => ingredient.recipe.recipe_chosen)} />
