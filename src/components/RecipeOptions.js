@@ -20,7 +20,7 @@ function RecipeOptions({recipe, updateRecipeList}) {
     };
 
     return (
-        <div>                
+        <div className="recipe-option-items">                
                 <input
                     type="checkbox"
                     id={recipe.id}

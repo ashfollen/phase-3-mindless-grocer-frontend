@@ -4,12 +4,33 @@
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+ 
 }
 
+/* nav */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.recipe-options-items {
+  display: flex;
+
+
+}
+
+.market-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5%;
+}
