@@ -2,6 +2,7 @@
 import Groceries from './Groceries';
 
 function GroceriesContainer({ markets, ingredients }) {
+
     // console.log("MARKETS IN GROCERIES CONTAINER", markets)
     // console.log("INGREDIENTS IN GROCERIES CONTAINERS", ingredients)
     return (

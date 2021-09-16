@@ -35,6 +35,13 @@ function App() {
       .then((ingredients) => setIngredients(ingredients));
   }, []);
 
+
+  function onDeleteRecipe(id) {
+    const revisedRecipeList = recipes.filter(recipe => recipe.id != id)
+    setRecipes(revisedRecipeList)
+  }
+
+
      
     function updateRecipeList(updatedCheckedRecipe) {
       setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
@@ -42,6 +49,7 @@ function App() {
       console.log(ingredients)
       // setIngredients(ingredients.map((ogIngred) => console.log(ogIngred)))
     }
+
 
 
   return (
@@ -57,7 +65,7 @@ function App() {
             <Home />
         </Route>
         <Route path="/recipes">
-            <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList}/>
+            <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList} onDeleteRecipe={onDeleteRecipe} />
         </Route>
         <Route path="/groceries">
             <GroceriesContainer markets={markets} ingredients={ingredients.filter(ingredient => ingredient.recipe_chosen)} />
