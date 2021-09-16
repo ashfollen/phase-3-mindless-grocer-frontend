@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import RecipesContainer from "./components/RecipesContainer"
 import GroceriesContainer from "./components/GroceriesContainer"
@@ -22,15 +22,6 @@ function App() {
       .then((recipes) => setRecipes(recipes));
   }, []);
   
-  function updateRecipeList(updatedCheckedRecipe) {
-    console.log("BEFORE SET INGREDIENTS", ingredients)
-    setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
-    console.log("IS THIS HAPPENING????")
-    setIngredients(ingredients.map((ogIngredient) => ogIngredient.recipe_id === updatedCheckedRecipe.id ? {...ogIngredient, recipe_chosen: true} : ogIngredient))
-    console.log("AFTER SETINGREDIENTS", ingredients)
-  
-  }
-
   useEffect(() => {
     fetch("http://localhost:9292/markets")
       .then((resp) => resp.json())
@@ -44,10 +35,20 @@ function App() {
       .then((ingredients) => setIngredients(ingredients));
   }, []);
 
+
   function onDeleteRecipe(id) {
     const revisedRecipeList = recipes.filter(recipe => recipe.id != id)
     setRecipes(revisedRecipeList)
   }
+
+
+     
+    function updateRecipeList(updatedCheckedRecipe) {
+      setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
+      setIngredients(ingredients.map((ogIngredient) => ogIngredient.recipe_id === updatedCheckedRecipe.id ? {...ogIngredient, recipe_chosen: true} : ogIngredient))
+      console.log(ingredients)
+      // setIngredients(ingredients.map((ogIngred) => console.log(ogIngred)))
+    }
 
 
 
@@ -67,7 +68,7 @@ function App() {
             <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList} onDeleteRecipe={onDeleteRecipe} />
         </Route>
         <Route path="/groceries">
-            <GroceriesContainer markets={markets} ingredients={ingredients.filter(ingredient => ingredient.recipe.recipe_chosen)} />
+            <GroceriesContainer markets={markets} ingredients={ingredients.filter(ingredient => ingredient.recipe_chosen)} />
         </Route>
       </Switch>
     </div>

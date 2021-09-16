@@ -3,83 +3,36 @@
   padding: 0;
 }
 
-/* fonts */
-/* @font-face {
-  font-family: 'blokletters_potloodpotlood';
-  src: url('./fonts/blokletters-potlood-webfont.woff2') format('woff2'),
-       url('./fonts/blokletters-potlood-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 
+body {
+
+ 
 }
 
-@font-face {
-  font-family: 'danielregular';
-  src: url('./fonts/daniel-regular-webfont.woff2') format('woff2'),
-       url('./fonts/daniel-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'journalregular';
-  src: url('./fonts/journal-webfont.woff2') format('woff2'),
-       url('./fonts/journal-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'over_the_rainbowregular';
-  src: url('./fonts/overtherainbow-webfont.woff2') format('woff2'),
-       url('./fonts/overtherainbow-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-} */
-
-/* body {
-
-} */
-
-/* a {
-  text-decoration: none; 
-}
-
-li {
-  text-decoration: none;
-} */
-
-/* Nav Bar */
-/* .nav {
+/* nav */
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-} */
 
-/* Recipes Container */
+}
 
-/* .recipes-container {
+.recipes-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-} */
+}
 
-/* .recipe-option-items {
+
+.recipe-options-items {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  
-} */
 
-/* Market Container */
-/* .market-container {
+
+}
+
+.market-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 5%;
-} */
-
-
+}
