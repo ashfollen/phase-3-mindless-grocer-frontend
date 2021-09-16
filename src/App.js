@@ -58,7 +58,7 @@ function App() {
             <RecipesContainer recipes={recipes} updateRecipeList={updateRecipeList}/>
         </Route>
         <Route path="/groceries">
-            <GroceriesContainer markets={markets} ingredients={ingredients} setIngredients={setIngredients}/>
+            <GroceriesContainer markets={markets} ingredients={ingredients.filter(ingredient => ingredient.recipe.recipe_chosen)} />
         </Route>
       </Switch>
     </div>
