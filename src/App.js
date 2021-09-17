@@ -47,7 +47,6 @@ function App() {
       setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
       setIngredients(ingredients.map((ogIngredient) => ogIngredient.recipe_id === updatedCheckedRecipe.id ? {...ogIngredient, recipe_chosen: true} : ogIngredient))
       console.log(ingredients)
-      // setIngredients(ingredients.map((ogIngred) => console.log(ogIngred)))
     }
 
 
