@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/* http://blogs.luc.edu/farmersmarket/files/2020/06/Produce-1140x550.jpg */
 
 body {
 
@@ -26,7 +27,7 @@ body {
 
 .recipe-options-items {
   display: flex;
-
+  
 
 }
 
@@ -35,4 +36,5 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   padding: 5%;
+  
 }
