@@ -41,7 +41,7 @@ function RecipeOptions({recipe, updateRecipeList, onDeleteRecipe}) {
                 &nbsp;&nbsp;
                 <h2>{recipe.name}</h2>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button id={recipe.id} onClick={(e) => handleDelete(e.target.id)}>&nbsp;&nbsp; 🗑 &nbsp;&nbsp;</button> 
+                <button id={recipe.id} onClick={(e) => handleDelete(e.target.id)}>&nbsp;&nbsp;🗑&nbsp;&nbsp;</button> 
         </div>
     )
 }
