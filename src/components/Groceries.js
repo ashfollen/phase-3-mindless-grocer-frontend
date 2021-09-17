@@ -5,7 +5,7 @@ function Groceries({ market, ingredients }) {
 
   return (
     <div className="groceries-by-market">
-      <h2>{market.name}</h2>
+      <h1>{market.name}</h1>
 
           {ingredients.map(ingredient => <GroceriesList key={ingredient.id} ingredient={ingredient} />)}
 

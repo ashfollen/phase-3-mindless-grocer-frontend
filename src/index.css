@@ -9,11 +9,7 @@
          url('./fonts/blokletters-potlood-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'danielregular';
@@ -21,11 +17,7 @@
          url('./fonts/daniel-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'journalregular';
@@ -33,11 +25,7 @@
          url('./fonts/journal-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'over_the_rainbowregular';
@@ -45,21 +33,53 @@
          url('./fonts/overtherainbow-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-/* nav */
+body {
+  background-image: url('./images/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+h1 {
+  padding: 20px;
+}
+
+li {
+  list-style: none;
+  font-family: 'danielregular';
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 25px;
+  padding-right: 25px; 
+}
+
+.home {
+  font-family: 'danielregular';
+  font-size: 3em;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10%;
+  padding-top: 5%;
+  color: whitesmoke;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   padding: 5%;
 }
+
 
 .recipes-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
 
 }
 
@@ -69,15 +89,19 @@
   flex-direction: row;
   padding: 2%;
   text-align: left;
-  margin-right: 100px;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .market-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+}
 
+.groceries-by-market {
+  width: 18%;
+  text-align: center;
 }
 
 .recipe-options h1 {
@@ -85,25 +109,20 @@
 }
 
 .recipe-options {
-  width: 60%;
+  width: 25%;
 }
 
-li {
-   list-style: none;
-    font-family: 'danielregular';
-    font-size: 1.5em;
-}
 
 .recipes {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  height: 400px;
-  width: 500px;
+  /* height: 400px;
+  width: 500px; */
 }
 
 .selected-recipes {
-  width: 40%;
+  width: 25%;
+  text-align: center;
 }
 
 
