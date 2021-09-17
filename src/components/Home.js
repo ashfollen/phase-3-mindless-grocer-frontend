@@ -2,7 +2,9 @@ import React, {useEffect, useState} from 'react';
 
 function Home() {
     return (
-        <h1>Testing Home</h1>
+        <div className="home">
+            The Mindless Grocer
+        </div>
     )
 }
 
