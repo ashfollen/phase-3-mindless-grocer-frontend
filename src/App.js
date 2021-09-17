@@ -47,7 +47,6 @@ function App() {
       setRecipes(recipes.map((ogRecipe) => ogRecipe.id === updatedCheckedRecipe.id ? {...ogRecipe, recipe_chosen: true} : ogRecipe))
       setIngredients(ingredients.map((ogIngredient) => ogIngredient.recipe_id === updatedCheckedRecipe.id ? {...ogIngredient, recipe_chosen: true} : ogIngredient))
       console.log(ingredients)
-      // setIngredients(ingredients.map((ogIngred) => console.log(ogIngred)))
     }
 
 
@@ -56,6 +55,11 @@ function App() {
     <Router>
     <div className="App">
       <nav className="nav">
+       <div id="header">
+        <img id="header-img"
+            src="http://blogs.luc.edu/farmersmarket/files/2020/06/Produce-1140x550.jpg" 
+            alt="fruit-vegetable"/>
+         </div>
         <h2><Link to="/">Home</Link></h2>
         <h2><Link to="/recipes">Recipes</Link></h2>
         <h2><Link to="/groceries">Grocery List</Link></h2>    

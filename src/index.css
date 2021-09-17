@@ -2,12 +2,50 @@
   margin: 0;
   padding: 0;
 }
-
 /* http://blogs.luc.edu/farmersmarket/files/2020/06/Produce-1140x550.jpg */
+@font-face {
+    font-family: 'blokletters_potloodpotlood';
+    src: url('./fonts/blokletters-potlood-webfont.woff2') format('woff2'),
+         url('./fonts/blokletters-potlood-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-body {
+}
 
- 
+
+
+
+@font-face {
+    font-family: 'danielregular';
+    src: url('./fonts/daniel-regular-webfont.woff2') format('woff2'),
+         url('./fonts/daniel-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'journalregular';
+    src: url('./fonts/journal-webfont.woff2') format('woff2'),
+         url('./fonts/journal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'over_the_rainbowregular';
+    src: url('./fonts/overtherainbow-webfont.woff2') format('woff2'),
+         url('./fonts/overtherainbow-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /* nav */
@@ -15,26 +53,62 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
+  padding: 5%;
 }
 
+#header-img {
+  height: 300px;
+  width: 650px;
+}
 .recipes-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+
 }
 
-
-.recipe-options-items {
+.recipe-option-items {
   display: flex;
-  
-
+  flex-direction: row;
+  padding: 2%;
+  text-align: left;
+  margin-right: 100px;
+  justify-content: space-between;
 }
 
 .market-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 5%;
-  
+
+}
+
+.recipe-options h1 {
+  text-align: center;
+}
+
+.recipe-options {
+  width: 60%;
+  border-style: dashed;
+
+}
+
+li {
+   list-style: none;
+    font-family: 'danielregular';
+    font-size: 1.5em;
+}
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+}
+
+.selected-recipes {
+  width: 40%;
+  /* padding-left: 13em; */
+  border-style: dashed;
 }
