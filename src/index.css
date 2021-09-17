@@ -4,14 +4,6 @@
 }
 
 @font-face {
-    font-family: 'blokletters_potloodpotlood';
-    src: url('./fonts/blokletters-potlood-webfont.woff2') format('woff2'),
-         url('./fonts/blokletters-potlood-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'danielregular';
     src: url('./fonts/daniel-regular-webfont.woff2') format('woff2'),
          url('./fonts/daniel-regular-webfont.woff') format('woff');
@@ -20,36 +12,49 @@
 }
 
 @font-face {
-    font-family: 'journalregular';
-    src: url('./fonts/journal-webfont.woff2') format('woff2'),
-         url('./fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'amaranthbold';
+  src: url('./fonts/amaranth-bold-webfont.woff2') format('woff2'),
+       url('./fonts/amaranth-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 @font-face {
-    font-family: 'over_the_rainbowregular';
-    src: url('./fonts/overtherainbow-webfont.woff2') format('woff2'),
-         url('./fonts/overtherainbow-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'amaranthregular';
+  src: url('./fonts/amaranth-regular-webfont.woff2') format('woff2'),
+       url('./fonts/amaranth-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 body {
   background-image: url('./images/bg-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: whitesmoke;
+  color: #fcfdfc;
 }
 
 h1 {
   padding: 20px;
+  font-family: 'amaranthregular';
+  color: #4d253f;
+  background-color: #f4e5d8;
+  border-radius: 50px 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'amaranthregular';
 }
 
 li {
   list-style: none;
   font-family: 'danielregular';
   font-size: 1.5em;
+  height: 50px;
+  padding: 2%;
 }
 
 a {
@@ -58,14 +63,18 @@ a {
   padding-right: 25px; 
 }
 
+a:visited {
+  color: #facb01;
+}
+
 .home {
   font-family: 'danielregular';
-  font-size: 3em;
+  font-size: 4em;
   display: flex;
   justify-content: flex-end;
   padding-right: 10%;
   padding-top: 5%;
-  color: whitesmoke;
+  color: #fcfdfc;
 }
 
 .nav {
@@ -75,14 +84,12 @@ a {
   padding: 5%;
 }
 
-
 .recipes-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
+  
 }
-
 
 .recipe-option-items {
   display: flex;
@@ -91,6 +98,7 @@ a {
   text-align: left;
   justify-content: space-between;
   align-items: baseline;
+  height: 50px;
 }
 
 .market-container {
@@ -110,19 +118,19 @@ a {
 
 .recipe-options {
   width: 25%;
+  margin: 10px;
 }
-
 
 .recipes {
   display: flex;
   flex-direction: column;
-  /* height: 400px;
-  width: 500px; */
 }
 
 .selected-recipes {
   width: 25%;
   text-align: center;
+  margin: 10px;
 }
+
 
 
